@@ -12,7 +12,7 @@ struct ContentView: View {
     
     @State private var edit = false
     @State private var show = false
-    @State private var notes: [String] = ["first", "second", "third"]
+    @State private var notes: [NoteModel] = [NoteModel(id: 0, title: "Hello", text: "Hello, World!", time: "24.05.2020"), NoteModel(id: 0, title: "Hello", text: "Hello, World!", time: "24.05.2020"), NoteModel(id: 0, title: "Hello", text: "Hello, World!", time: "24.05.2020")]
     
     var body: some View {
         
@@ -52,12 +52,10 @@ struct ContentView: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     
                     VStack(spacing: 10) {
-                        ForEach(notes, id: \.self){ note in
+                        ForEach(notes){ note in
                             VStack(alignment: .leading) {
-                                Text(note)
-                                    .font(.title)
+                                CellView(edit: self.edit, note: note)
                             }.padding()
-                                .background(Color.white.opacity(0.9))
                                 .onTapGesture {
                                     self.show.toggle()
                             }
@@ -67,7 +65,7 @@ struct ContentView: View {
                 }.padding(.top, 30)
             }
             .sheet(isPresented: $show) {
-                Text("hello")
+                CreateView()
             }
             
         }

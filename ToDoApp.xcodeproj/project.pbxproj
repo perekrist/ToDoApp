@@ -14,6 +14,10 @@
 		CA3FFE90247A8FE000179049 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3FFE8F247A8FE000179049 /* Preview Assets.xcassets */; };
 		CA3FFE93247A8FE000179049 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3FFE91247A8FE000179049 /* LaunchScreen.storyboard */; };
 		CA3FFE9B247A90DD00179049 /* Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3FFE9A247A90DD00179049 /* Rounded.swift */; };
+		CA3FFE9D247A936300179049 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3FFE9C247A936300179049 /* CreateView.swift */; };
+		CA3FFE9F247A948B00179049 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3FFE9E247A948B00179049 /* CellView.swift */; };
+		CA3FFEA1247A94C200179049 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3FFEA0247A94C200179049 /* NoteModel.swift */; };
+		CA3FFEA6247A953000179049 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3FFEA5247A953000179049 /* NotesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		CA3FFE92247A8FE000179049 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA3FFE94247A8FE000179049 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA3FFE9A247A90DD00179049 /* Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rounded.swift; sourceTree = "<group>"; };
+		CA3FFE9C247A936300179049 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		CA3FFE9E247A948B00179049 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		CA3FFEA0247A94C200179049 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		CA3FFEA5247A953000179049 /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +66,15 @@
 		CA3FFE85247A8FD900179049 /* ToDoApp */ = {
 			isa = PBXGroup;
 			children = (
+				CA3FFEA4247A950B00179049 /* ViewModel */,
+				CA3FFEA3247A950600179049 /* Model */,
+				CA3FFEA2247A950000179049 /* View */,
 				CA3FFE86247A8FD900179049 /* AppDelegate.swift */,
 				CA3FFE88247A8FD900179049 /* SceneDelegate.swift */,
-				CA3FFE8A247A8FD900179049 /* ContentView.swift */,
 				CA3FFE8C247A8FE000179049 /* Assets.xcassets */,
 				CA3FFE91247A8FE000179049 /* LaunchScreen.storyboard */,
 				CA3FFE94247A8FE000179049 /* Info.plist */,
 				CA3FFE8E247A8FE000179049 /* Preview Content */,
-				CA3FFE9A247A90DD00179049 /* Rounded.swift */,
 			);
 			path = ToDoApp;
 			sourceTree = "<group>";
@@ -76,6 +85,33 @@
 				CA3FFE8F247A8FE000179049 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CA3FFEA2247A950000179049 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA3FFE9A247A90DD00179049 /* Rounded.swift */,
+				CA3FFE9E247A948B00179049 /* CellView.swift */,
+				CA3FFE9C247A936300179049 /* CreateView.swift */,
+				CA3FFE8A247A8FD900179049 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA3FFEA3247A950600179049 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA3FFEA0247A94C200179049 /* NoteModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CA3FFEA4247A950B00179049 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA3FFEA5247A953000179049 /* NotesViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +187,12 @@
 			files = (
 				CA3FFE87247A8FD900179049 /* AppDelegate.swift in Sources */,
 				CA3FFE9B247A90DD00179049 /* Rounded.swift in Sources */,
+				CA3FFE9F247A948B00179049 /* CellView.swift in Sources */,
+				CA3FFEA1247A94C200179049 /* NoteModel.swift in Sources */,
+				CA3FFEA6247A953000179049 /* NotesViewModel.swift in Sources */,
 				CA3FFE89247A8FD900179049 /* SceneDelegate.swift in Sources */,
 				CA3FFE8B247A8FD900179049 /* ContentView.swift in Sources */,
+				CA3FFE9D247A936300179049 /* CreateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

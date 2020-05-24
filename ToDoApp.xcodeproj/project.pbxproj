@@ -13,6 +13,7 @@
 		CA3FFE8D247A8FE000179049 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3FFE8C247A8FE000179049 /* Assets.xcassets */; };
 		CA3FFE90247A8FE000179049 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3FFE8F247A8FE000179049 /* Preview Assets.xcassets */; };
 		CA3FFE93247A8FE000179049 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3FFE91247A8FE000179049 /* LaunchScreen.storyboard */; };
+		CA3FFE9B247A90DD00179049 /* Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3FFE9A247A90DD00179049 /* Rounded.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CA3FFE8F247A8FE000179049 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CA3FFE92247A8FE000179049 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA3FFE94247A8FE000179049 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA3FFE9A247A90DD00179049 /* Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rounded.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				CA3FFE91247A8FE000179049 /* LaunchScreen.storyboard */,
 				CA3FFE94247A8FE000179049 /* Info.plist */,
 				CA3FFE8E247A8FE000179049 /* Preview Content */,
+				CA3FFE9A247A90DD00179049 /* Rounded.swift */,
 			);
 			path = ToDoApp;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA3FFE87247A8FD900179049 /* AppDelegate.swift in Sources */,
+				CA3FFE9B247A90DD00179049 /* Rounded.swift in Sources */,
 				CA3FFE89247A8FD900179049 /* SceneDelegate.swift in Sources */,
 				CA3FFE8B247A8FD900179049 /* ContentView.swift in Sources */,
 			);

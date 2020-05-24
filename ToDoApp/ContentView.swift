@@ -9,8 +9,68 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var edit = false
+    @State private var show = false
+    @State private var notes: [String] = ["first", "second", "third"]
+    
     var body: some View {
-        Text("Hello, World!")
+        
+        ZStack {
+            Color.black.edgesIgnoringSafeArea(.bottom)
+            
+            VStack {
+                VStack(spacing: 5) {
+                    HStack {
+                        Text("ToDo")
+                            .font(.largeTitle)
+                            .fontWeight(.heavy)
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            self.edit.toggle()
+                        }) {
+                            Text(self.edit ? "Done" : "Edit")
+                        }
+                        
+                    }.padding([.leading,.trailing], 15)
+                        .padding(.top, 10)
+                    
+                    Button(action: {
+                        self.show.toggle()
+                    }) {
+                        Image(systemName: "plus").resizable().frame(width: 25, height: 25).padding()
+                    }.foregroundColor(.white)
+                        .background(Color.red)
+                        .clipShape(Circle())
+                        .padding(.bottom, -15)
+                        .offset(y: 15)
+                    
+                }.background(Rounded().fill(Color.white))
+                
+                ScrollView(.vertical, showsIndicators: false) {
+                    
+                    VStack(spacing: 10) {
+                        ForEach(notes, id: \.self){ note in
+                            VStack(alignment: .leading) {
+                                Text(note)
+                                    .font(.title)
+                            }.padding()
+                                .background(Color.white.opacity(0.9))
+                                .onTapGesture {
+                                    self.show.toggle()
+                            }
+                        }
+                    }.padding()
+                    
+                }.padding(.top, 30)
+            }
+            .sheet(isPresented: $show) {
+                Text("hello")
+            }
+            
+        }
     }
 }
 

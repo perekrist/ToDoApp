@@ -9,7 +9,7 @@
 import Foundation
 
 struct NoteModel: Identifiable {
-    var id: Int
+    var id: UUID
     var title: String
     var text: String
     var time: String

@@ -39,6 +39,6 @@ struct CellView: View {
 
 struct CellView_Previews: PreviewProvider {
     static var previews: some View {
-        CellView(edit: false, note: NoteModel(id: 0, title: "Hello", text: "Hello, World!", time: "24.05.2020"))
+        CellView(edit: false, note: NoteModel(id: UUID(), title: "Hello", text: "Hello, World!", time: "24.05.2020"))
     }
 }

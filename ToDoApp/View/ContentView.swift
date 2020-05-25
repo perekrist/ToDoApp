@@ -12,7 +12,7 @@ struct ContentView: View {
     
     @State private var edit = false
     @State private var show = false
-    @State private var notes: [NoteModel] = [NoteModel(id: 0, title: "Hello", text: "Hello, World!", time: "24.05.2020"), NoteModel(id: 0, title: "Hello", text: "Hello, World!", time: "24.05.2020"), NoteModel(id: 0, title: "Hello", text: "Hello, World!", time: "24.05.2020")]
+    @State private var notes: [NoteModel] = []
     
     var body: some View {
         

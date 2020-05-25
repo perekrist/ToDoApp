@@ -11,6 +11,10 @@ import RealmSwift
 
 class NotesViewModel: ObservableObject {
     
+    @Published var notes = [NoteModel]()
+    
+    @Published var id = 0
+    
     let config = Realm.Configuration(schemaVersion: 1)
     
     func save(note: NoteModel) {
@@ -22,8 +26,6 @@ class NotesViewModel: ObservableObject {
             
             try realm.write({
                 realm.add(newNote)
-                
-                print("succes")
             })
         } catch {
             print(error.localizedDescription)
@@ -31,11 +33,14 @@ class NotesViewModel: ObservableObject {
     }
     
     func get() {
+        self.notes.removeAll()
         do {
             let realm = try Realm(configuration: config)
             let result = realm.objects(NoteModelObj.self)
-            
-            print(result)
+            for i in result {
+                notes.append(NoteModel(id: i.id, title: i.title, text: i.text, time: i.time))
+            }
+            print(notes)
         } catch {
             print(error.localizedDescription)
         }

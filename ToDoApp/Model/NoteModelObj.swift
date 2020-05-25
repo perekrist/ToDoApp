@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 class NoteModelObj: Object {
-    @objc dynamic var id = UUID()
+    @objc dynamic var id = 0
     @objc dynamic var title = ""
     @objc dynamic var text = ""
     @objc dynamic var time = ""

@@ -12,7 +12,8 @@ struct ContentView: View {
     
     @State private var edit = false
     @State private var show = false
-    @State private var notes: [NoteModel] = []
+    
+    @ObservedObject private var notesViewModel = NotesViewModel()
     
     var body: some View {
         
@@ -52,20 +53,24 @@ struct ContentView: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     
                     VStack(spacing: 10) {
-                        ForEach(notes){ note in
+                        ForEach(notesViewModel.notes){ note in
                             VStack(alignment: .leading) {
                                 CellView(edit: self.edit, note: note)
                             }.padding()
-                                .onTapGesture {
-                                    self.show.toggle()
-                            }
+//                                .onTapGesture {
+//                                    self.show.toggle()
+//                            }
                         }
                     }.padding()
                     
                 }.padding(.top, 30)
+                .onAppear {
+                    self.notesViewModel.get()
+                }
+                .animation(.spring())
             }
             .sheet(isPresented: $show) {
-                CreateView()
+                CreateView(show: self.$show, notesViewModel: self.notesViewModel)
             }
             
         }
